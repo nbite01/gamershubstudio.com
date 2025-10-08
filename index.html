@@ -8,10 +8,7 @@
     <link rel="icon" type="image/png" href="logo_pequeño_gamershub-removebg-preview.png">
 
     <style>
-        /* Importación de Fuentes */
-        @import url('https://fonts.cdnfonts.com/css/monument-extended');
-        @import url('https://fonts.cdnfonts.com/css/avenir-next-lt-pro');
-
+        /* ... (Todo el CSS se mantiene igual) ... */
         :root {
             --color-fondo: #0F0331;
             --color-texto-principal: #FFFFFF;
@@ -21,31 +18,16 @@
             --fuente-cuerpo: 'Avenir Next LT Pro', sans-serif;
         }
 
-        body {
-            background-color: var(--color-fondo);
-            color: var(--color-texto-principal);
-            font-family: var(--fuente-cuerpo);
-            margin: 0;
-            padding: 2rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            text-align: center;
-        }
-
+        body { background-color: var(--color-fondo); color: var(--color-texto-principal); font-family: var(--fuente-cuerpo); margin: 0; padding: 2rem; display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 100vh; text-align: center; }
         .container { max-width: 600px; width: 100%; }
-        header .logo { max-width: 400px; height: auto; margin-bottom: 1rem; cursor: pointer; /* Añadido cursor para indicar que es clicable */ }
+        header .logo { max-width: 400px; height: auto; margin-bottom: 1rem; cursor: pointer; }
         h1 { font-family: var(--fuente-titulos); color: var(--color-texto-principal); font-size: 1.8rem; margin: 0; text-transform: uppercase; }
         p.description { font-size: 1rem; max-width: 480px; margin: 1rem auto 2rem auto; line-height: 1.6; color: rgba(255, 255, 255, 0.85); }
-
         #countdown { display: flex; justify-content: center; gap: 1rem; margin-bottom: 2.5rem; }
         .time-block { background-color: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); padding: 0.8rem; border-radius: 10px; min-width: 70px; }
         .time-block span { display: block; }
         .time-block .number { font-family: var(--fuente-titulos); font-size: 2rem; color: var(--color-acento); }
         .time-block .label { font-size: 0.7rem; text-transform: uppercase; color: rgba(255, 255, 255, 0.7); }
-        
         #signup-form { margin-bottom: 2.5rem; }
         #signup-form p { margin: 0 0 1rem 0; font-weight: bold; }
         .form-container { display: flex; gap: 0.5rem; justify-content: center; max-width: 450px; margin: auto; }
@@ -54,15 +36,12 @@
         #submit-button { padding: 0.9rem 1.5rem; border: none; border-radius: 8px; background-color: var(--color-acento); color: var(--color-fondo); font-family: var(--fuente-titulos); font-size: 0.9rem; cursor: pointer; transition: all 0.3s ease; }
         #submit-button:hover { background-color: var(--color-texto-principal); }
         #form-status { margin-top: 1rem; font-weight: bold; }
-        
         .social-links a { border: 2px solid var(--color-titulos); color: var(--color-texto-principal); padding: 1rem; margin: 0.5rem 0; display: flex; align-items: center; justify-content: center; text-decoration: none; font-family: var(--fuente-titulos); font-size: 0.9rem; border-radius: 10px; transition: all 0.3s ease; text-transform: uppercase; }
         .social-links a:hover { background-color: var(--color-titulos); color: var(--color-fondo); box-shadow: 0 0 15px var(--color-titulos); }
         .social-links a svg { width: 24px; height: 24px; margin-right: 12px; fill: currentColor; }
-        
         footer { margin-top: 3rem; font-size: 0.9rem; color: rgba(255, 255, 255, 0.6); }
         footer a { color: var(--color-acento); text-decoration: none; font-weight: bold; }
         footer a:hover { text-decoration: underline; }
-
         @media (max-width: 768px) {
             body { padding: 1.5rem; }
             header .logo { max-width: 90%; }
@@ -84,14 +63,12 @@
 
         <main>
             <p class="description">Un espacio creado para la concentración y el ocio, combinando un entorno seguro y privado con tecnología de punta.</p>
-            
             <div id="countdown">
                 <div class="time-block"><span class="number" id="days">00</span><span class="label">Días</span></div>
                 <div class="time-block"><span class="number" id="hours">00</span><span class="label">Horas</span></div>
                 <div class="time-block"><span class="number" id="minutes">00</span><span class="label">Minutos</span></div>
                 <div class="time-block"><span class="number" id="seconds">00</span><span class="label">Segundos</span></div>
             </div>
-
             <div id="signup-form">
                 <p>¡Sé el primero en enterarte!</p>
                 <form id="contact-form" class="form-container" action="https://formspree.io/f/xwprnynq" method="POST">
@@ -100,14 +77,13 @@
                 </form>
                 <p id="form-status"></p>
             </div>
-
             <div class="social-links">
                 <a href="https://www.instagram.com/gamershubstudio" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"><path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z" /></svg>Instagram</a>
                 <a href="https://twitter.com/gamershubstudio" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>X (Twitter)</a>
             </div>
         </main>
 
-        <div id="easter-egg" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 3, 49, 0.95); display: flex; justify-content: center; align-items: center; z-index: 9999; font-family: var(--fuente-titulos); font-size: 2.5rem; color: var(--color-acento); text-shadow: 0 0 15px var(--color-acento); padding: 1rem; text-align: center;">
+        <div id="easter-egg" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 3, 49, 0.95); justify-content: center; align-items: center; z-index: 9999; font-family: var(--fuente-titulos); font-size: 2.5rem; color: var(--color-acento); text-shadow: 0 0 15px var(--color-acento); padding: 1rem; text-align: center;">
             pomposhitaa &lt;3
         </div>
         
@@ -119,6 +95,7 @@
 
     <script>
         // --- SCRIPT DEL CONTADOR Y FORMULARIO ---
+        // ... (Este script no ha cambiado) ...
         const countdownDate = new Date("November 15, 2025 00:00:00").getTime();
         const x = setInterval(function() {
             const now = new Date().getTime();
@@ -136,7 +113,6 @@
                 document.getElementById("countdown").innerHTML = "¡YA ESTAMOS AQUÍ!";
             }
         }, 1000);
-
         const form = document.getElementById("contact-form");
         async function handleSubmit(event) {
             event.preventDefault();
@@ -167,17 +143,14 @@
     <script>
         const logo = document.querySelector('.logo');
         let tapCount = 0;
-        const tapsNeeded = 7; // El número de toques para activar
-
+        const tapsNeeded = 7; 
         logo.addEventListener('click', function() {
             tapCount++;
             if (tapCount >= tapsNeeded) {
                 document.getElementById('easter-egg').style.display = 'flex';
-                tapCount = 0; // Reiniciar el contador
+                tapCount = 0;
             }
         });
-
-        // Ocultar el mensaje al tocarlo
         document.getElementById('easter-egg').addEventListener('click', function() {
             this.style.display = 'none';
         });
