@@ -12,7 +12,7 @@
         @import url('https://fonts.cdnfonts.com/css/monument-extended');
         @import url('https://fonts.cdnfonts.com/css/avenir-next-lt-pro');
 
-        /* Variables de Color del Manual de Marca */
+        /* Variables de Color */
         :root {
             --color-fondo: #0F0331;
             --color-texto-principal: #FFFFFF;
@@ -20,6 +20,27 @@
             --color-acento: #D8FF00;
             --fuente-titulos: 'Monument Extended', sans-serif;
             --fuente-cuerpo: 'Avenir Next LT Pro', sans-serif;
+        }
+
+        /* =========== 1. NUEVO: Keyframes para las Animaciones =========== */
+        @keyframes fadeIn-Up {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
         }
 
         /* Estilos Generales */
@@ -35,9 +56,27 @@
             align-items: center;
             min-height: 100vh;
             text-align: center;
+            overflow-x: hidden; /* Previene scroll horizontal por animaciones */
         }
 
-        .container { max-width: 600px; width: 100%; }
+        .container { 
+            max-width: 600px; 
+            width: 100%; 
+        }
+
+        /* =========== 2. NUEVO: Aplicando animación de entrada =========== */
+        header, .description, #countdown, #signup-form, .social-links {
+            animation: fadeIn-Up 0.8s ease-out forwards;
+            opacity: 0; /* Inicia oculto */
+        }
+
+        /* Retrasos para que aparezcan en secuencia */
+        .description { animation-delay: 0.2s; }
+        #countdown { animation-delay: 0.4s; }
+        #signup-form { animation-delay: 0.6s; }
+        .social-links { animation-delay: 0.8s; }
+
+
         header .logo { max-width: 400px; height: auto; margin-bottom: 1rem; cursor: pointer; } 
         h1 { font-family: var(--fuente-titulos); color: var(--color-texto-principal); font-size: 1.8rem; margin: 0; text-transform: uppercase; }
         p.description { font-size: 1rem; max-width: 480px; margin: 1rem auto 2rem auto; line-height: 1.6; color: rgba(255, 255, 255, 0.85); }
@@ -46,7 +85,13 @@
         #countdown { display: flex; justify-content: center; gap: 1rem; margin-bottom: 2.5rem; }
         .time-block { background-color: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); padding: 0.8rem; border-radius: 10px; min-width: 70px; }
         .time-block span { display: block; }
-        .time-block .number { font-family: var(--fuente-titulos); font-size: 2rem; color: var(--color-acento); }
+        .time-block .number { 
+            font-family: var(--fuente-titulos); 
+            font-size: 2rem; 
+            color: var(--color-acento);
+            /* =========== 3. NUEVO: Animación de pulsación =========== */
+            animation: pulse 2s infinite ease-in-out;
+        }
         .time-block .label { font-size: 0.7rem; text-transform: uppercase; color: rgba(255, 255, 255, 0.7); }
 
         /* Formulario de Email */
@@ -54,36 +99,39 @@
         #signup-form p { margin: 0 0 1rem 0; font-weight: bold; }
         .form-container { display: flex; gap: 0.5rem; justify-content: center; max-width: 450px; margin: auto; }
         #email-input {
-            flex-grow: 1;
-            padding: 0.9rem;
-            border-radius: 8px;
-            border: 2px solid var(--color-titulos);
-            background-color: rgba(255, 255, 255, 0.1);
-            color: white;
-            font-family: var(--fuente-cuerpo);
-            font-size: 1rem;
+            flex-grow: 1; padding: 0.9rem; border-radius: 8px; border: 2px solid var(--color-titulos);
+            background-color: rgba(255, 255, 255, 0.1); color: white; font-family: var(--fuente-cuerpo);
+            font-size: 1rem; transition: all 0.3s ease; /* Transición suave */
+        }
+        #email-input:focus {
+            /* =========== 4. NUEVO: Efecto Glow al seleccionar el campo de email =========== */
+            box-shadow: 0 0 15px var(--color-titulos);
+            border-color: var(--color-acento);
         }
         #email-input::placeholder { color: rgba(255, 255, 255, 0.5); }
         #submit-button {
-            padding: 0.9rem 1.5rem;
-            border: none;
-            border-radius: 8px;
-            background-color: var(--color-acento);
-            color: var(--color-fondo);
-            font-family: var(--fuente-titulos);
-            font-size: 0.9rem;
-            cursor: pointer;
+            padding: 0.9rem 1.5rem; border: none; border-radius: 8px; background-color: var(--color-acento);
+            color: var(--color-fondo); font-family: var(--fuente-titulos); font-size: 0.9rem; cursor: pointer;
             transition: all 0.3s ease;
         }
-        #submit-button:hover { background-color: var(--color-texto-principal); }
+        #submit-button:hover { 
+            background-color: var(--color-texto-principal);
+            /* =========== 5. NUEVO: Efecto Glow en el botón =========== */
+            box-shadow: 0 0 20px var(--color-acento);
+            transform: translateY(-3px); /* Ligero movimiento hacia arriba */
+        }
         #form-status { margin-top: 1rem; font-weight: bold; }
 
         /* Enlaces a Redes Sociales */
         .social-links a { border: 2px solid var(--color-titulos); color: var(--color-texto-principal); padding: 1rem; margin: 0.5rem 0; display: flex; align-items: center; justify-content: center; text-decoration: none; font-family: var(--fuente-titulos); font-size: 0.9rem; border-radius: 10px; transition: all 0.3s ease; text-transform: uppercase; }
-        .social-links a:hover { background-color: var(--color-titulos); color: var(--color-fondo); box-shadow: 0 0 15px var(--color-titulos); }
+        .social-links a:hover { 
+            background-color: var(--color-titulos); color: var(--color-fondo);
+            /* =========== 6. NUEVO: Efecto Glow en enlaces sociales =========== */
+            box-shadow: 0 0 20px var(--color-titulos);
+            transform: translateY(-3px); /* Ligero movimiento hacia arriba */
+        }
         .social-links a svg { width: 24px; height: 24px; margin-right: 12px; fill: currentColor; }
         
-        /* Pie de página */
         footer { margin-top: 3rem; font-size: 0.9rem; color: rgba(255, 255, 255, 0.6); }
         footer a { color: var(--color-acento); text-decoration: none; font-weight: bold; }
         footer a:hover { text-decoration: underline; }
