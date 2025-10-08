@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidad - Gamers Hub Studio</title>
+    <style>
+        /* Importación de Fuentes */
+        @import url('https://fonts.cdnfonts.com/css/monument-extended');
+        @import url('https://fonts.cdnfonts.com/css/avenir-next-lt-pro');
+
+        /* Variables de Color del Manual de Marca */
+        :root {
+            --color-fondo: #0F0331; /* Azul oscuro/morado corporativo */
+            --color-texto-principal: #FFFFFF;
+            --color-titulos: #F100FF; /* Magenta corporativo */
+            --color-acento: #D8FF00; /* Amarillo/verde lima corporativo */
+            --fuente-titulos: 'Monument Extended', sans-serif;
+            --fuente-cuerpo: 'Avenir Next LT Pro', sans-serif;
+        }
+
+        /* Estilos Generales */
+        body {
+            background-color: var(--color-fondo);
+            color: var(--color-texto-principal);
+            font-family: var(--fuente-cuerpo);
+            margin: 0;
+            padding: 2rem;
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Contenedor Principal */
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 2rem 3rem;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        /* Cabecera con Logo */
+        header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        header .logo {
+            max-width: 250px;
+            height: auto;
+        }
+
+        /* Títulos y Secciones */
+        h1 {
+            font-family: var(--fuente-titulos);
+            color: var(--color-titulos);
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            font-family: var(--fuente-titulos);
+            color: var(--color-acento);
+            font-size: 1.2rem;
+            margin-top: 2rem;
+            border-bottom: 2px solid var(--color-acento);
+            padding-bottom: 0.5rem;
+            text-transform: uppercase;
+        }
+
+        /* Párrafos y Listas */
+        p, li {
+            font-size: 1rem;
+            text-align: justify;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        li {
+            padding-left: 1.5em;
+            text-indent: -1.5em;
+        }
+
+        li::before {
+            content: '•';
+            color: var(--color-acento);
+            margin-right: 0.7em;
+            font-size: 1.2em;
+        }
+        
+        /* Enlaces */
+        a {
+            color: var(--color-acento);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--color-titulos);
+            text-decoration: underline;
+        }
+        
+        /* Pie de página */
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        /* Adaptación para móviles */
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+            .container {
+                padding: 1.5rem;
+            }
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <!-- Logo extraído del manual. Es un SVG para máxima calidad y escalabilidad -->
+            <svg class="logo" viewBox="0 0 300 130" xmlns="http://www.w3.org/2000/svg" fill="white">
+              <defs>
+                <style>
+                  .gamer-text { fill: #F100FF; font-family: 'Monument Extended', sans-serif; font-size: 40px; font-weight: bold; }
+                  .hub-text { fill: #0F0331; font-family: 'Monument Extended', sans-serif; font-size: 40px; font-weight: bold; }
+                  .studio-text { fill: white; font-family: 'Avenir Next LT Pro', sans-serif; font-size: 14px; font-weight: bold; }
+                  .gamer-bg { fill: white; stroke: #F100FF; stroke-width: 2; }
+                  .hub-bg { fill: white; stroke: #0F0331; stroke-width: 2; }
+                  .studio-bg { fill: #0F0331; }
+                </style>
+              </defs>
+              <g id="logo-gamer">
+                  <rect x="10" y="10" width="45" height="45" rx="5" class="gamer-bg"/>
+                  <text x="18" y="45" class="gamer-text">G</text>
+                  <rect x="65" y="10" width="45" height="45" rx="5" class="gamer-bg"/>
+                  <text x="70" y="45" class="gamer-text">A</text>
+                  <rect x="120" y="10" width="45" height="45" rx="5" class="gamer-bg"/>
+                  <text x="125" y="45" class="gamer-text">M</text>
+                  <rect x="175" y="10" width="45" height="45" rx="5" class="gamer-bg"/>
+                  <text x="182" y="45" class="gamer-text">E</text>
+                  <rect x="230" y="10" width="45" height="45" rx="5" class="gamer-bg"/>
+                  <text x="237" y="45" class="gamer-text">R</text>
+              </g>
+              <g id="logo-hub">
+                  <rect x="65" y="70" width="45" height="45" rx="5" class="hub-bg"/>
+                  <text x="72" y="105" class="hub-text" style="fill:#0F0331;">H</text>
+                  <rect x="120" y="70" width="45" height="45" rx="5" class="hub-bg"/>
+                  <text x="127" y="105" class="hub-text" style="fill:#0F0331;">U</text>
+                  <rect x="175" y="70" width="45" height="45" rx="5" class="hub-bg"/>
+                  <text x="182" y="105" class="hub-text" style="fill:#0F0331;">B</text>
+              </g>
+              <g id="logo-studio">
+                 <rect x="225" y="70" width="50" height="45" rx="5" class="studio-bg"/>
+                 <text x="248" y="100" class="studio-text" transform="rotate(-90 248 100)">STUDIO</text>
+              </g>
+            </svg>
+        </header>
+
+        <main>
+            <h1>Política de Privacidad</h1>
+
+            <p>La presente Política de Privacidad regula el tratamiento de los datos personales que se recaban a través de la página web <a href="https://gamershubstudio.com">gamershubstudio.com</a>, titularidad de la empresa <strong>[Gamer HubStudio S.L]</strong>, con domicilio en [CL,.Muntaner, 379 Pta. 2 1 - 08021], NIF/CIF [B21711544] y correo electrónico de contacto <a href="mailto:gamerhubbcn@gmail.com">gamerhubbcn@gmail.com</a>. En adelante, “la empresa”.</p>
+
+            <h2>1. Finalidad del tratamiento</h2>
+            <p>Los datos personales facilitados a través de esta web se tratarán con las siguientes finalidades:</p>
+            <ul>
+                <li>Gestionar solicitudes de información, contacto o presupuestos.</li>
+                <li>Gestionar la contratación de servicios y la relación comercial.</li>
+                <li>Mantener informados a los usuarios sobre actividades, novedades y comunicaciones comerciales, siempre que medie consentimiento expreso.</li>
+            </ul>
+
+            <h2>2. Legitimación</h2>
+            <p>El tratamiento de los datos se basa en:</p>
+            <ul>
+                <li>El consentimiento libre e informado del usuario.</li>
+                <li>La ejecución de un contrato o la aplicación de medidas precontractuales.</li>
+                <li>El cumplimiento de obligaciones legales aplicables a la empresa.</li>
+            </ul>
+
+            <h2>3. Conservación de los datos</h2>
+            <p>Los datos se conservarán mientras exista relación contractual o consentimiento, y posteriormente durante los plazos exigidos por la legislación aplicable.</p>
+
+            <h2>4. Destinatarios</h2>
+            <p>Los datos no se cederán a terceros salvo obligación legal o cuando sea imprescindible para la correcta prestación del servicio (proveedores de hosting, mensajería, comunicaciones, etc.), en cuyo caso se adoptarán las garantías adecuadas.</p>
+
+            <h2>5. Derechos de los usuarios</h2>
+            <p>Los usuarios pueden ejercer en cualquier momento sus derechos de acceso, rectificación, supresión, limitación, oposición y portabilidad de los datos enviando un escrito a <a href="mailto:gamerhubbcn@gmail.com">gamerhubbcn@gmail.com</a> o a la dirección postal de la empresa.</p>
+            <p>En caso de discrepancia, los interesados tienen derecho a presentar una reclamación ante la Agencia Española de Protección de Datos (<a href="https://www.aepd.es" target="_blank" rel="noopener noreferrer">www.aepd.es</a>).</p>
+
+            <h2>6. Seguridad</h2>
+            <p>La empresa adopta las medidas técnicas y organizativas necesarias para garantizar la seguridad y confidencialidad de los datos, evitando accesos no autorizados, pérdidas o alteraciones.</p>
+
+            <h2>7. Jurisdicción</h2>
+            <p>La presente política se rige por la legislación española. Cualquier controversia relacionada con su interpretación o ejecución se someterá expresamente a los Juzgados y Tribunales de Barcelona, con renuncia a cualquier otro fuero que pudiera corresponder.</p>
+        </main>
+        
+        <footer>
+            <p>&copy; 2025 Gamers Hub Studio S.L. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
