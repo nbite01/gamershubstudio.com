@@ -41,8 +41,8 @@
         /* Estilos del Formulario */
         .form-group { margin-bottom: 1.5rem; text-align: left; }
         .form-group label { display: block; margin-bottom: 0.5rem; font-weight: bold; }
-        input[type="text"], input[type="number"], textarea { width: 100%; padding: 0.8rem; border-radius: 8px; border: 2px solid var(--color-titulos); background-color: rgba(255, 255, 255, 0.1); color: white; font-family: var(--fuente-cuerpo); font-size: 1rem; box-sizing: border-box; transition: all 0.3s ease; }
-        input[type="text"]:focus, input[type="number"]:focus, textarea:focus { outline: none; box-shadow: 0 0 15px var(--color-titulos); border-color: var(--color-acento); }
+        input[type="text"], input[type="email"], input[type="number"], textarea { width: 100%; padding: 0.8rem; border-radius: 8px; border: 2px solid var(--color-titulos); background-color: rgba(255, 255, 255, 0.1); color: white; font-family: var(--fuente-cuerpo); font-size: 1rem; box-sizing: border-box; transition: all 0.3s ease; }
+        input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus, textarea:focus { outline: none; box-shadow: 0 0 15px var(--color-titulos); border-color: var(--color-acento); }
         textarea { min-height: 120px; resize: vertical; }
         .choice-group { display: flex; flex-wrap: wrap; gap: 1rem; }
         .choice-group label { display: flex; align-items: center; cursor: pointer; font-weight: normal; }
@@ -85,13 +85,23 @@
         <main>
             <div id="form-container">
                 <h1>Tu Opinión es Clave</h1>
-                <p>¡Gracias por probar la beta de GamersHub Studio! Tu feedback nos ayudará a crear la mejor experiencia posible. [cite: 2] Por favor, tómate unos minutos para rellenar esta encuesta.</p>
+                <p>¡Gracias por probar la beta de GamersHub Studio! Tu feedback nos ayudará a crear la mejor experiencia posible. Por favor, tómate unos minutos para rellenar esta encuesta.</p>
 
                 <form id="feedback-form" action="https://formspree.io/f/xeorrqlq" method="POST">
                     
+                    <h2>Tus Datos (Opcional)</h2>
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Para saber quién eres">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Por si necesitamos contactarte sobre tu feedback">
+                    </div>
+
                     <h2>Reserva y Llegada</h2>
                     <div class="form-group">
-                        <label>1. Facilidad para reservar el estudio [cite: 12]</label>
+                        <label>1. Facilidad para reservar el estudio</label>
                         <div class="star-rating">
                             <input type="radio" id="res-5" name="facilidad_reserva" value="5"><label for="res-5">★</label>
                             <input type="radio" id="res-4" name="facilidad_reserva" value="4"><label for="res-4">★</label>
@@ -101,7 +111,7 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label>2. Atención al cliente y soporte del personal [cite: 40]</label>
+                        <label>2. Atención al cliente y soporte del personal</label>
                         <div class="star-rating">
                             <input type="radio" id="sop-5" name="soporte_personal" value="5"><label for="sop-5">★</label>
                             <input type="radio" id="sop-4" name="soporte_personal" value="4"><label for="sop-4">★</label>
@@ -113,7 +123,7 @@
                     
                     <h2>El Estudio</h2>
                     <div class="form-group">
-                        <label>3. Calidad del equipo (PC, cámaras, periféricos, etc.) [cite: 19]</label>
+                        <label>3. Calidad del equipo (PC, cámaras, periféricos, etc.)</label>
                         <div class="star-rating">
                             <input type="radio" id="eq-5" name="calidad_equipo" value="5"><label for="eq-5">★</label>
                             <input type="radio" id="eq-4" name="calidad_equipo" value="4"><label for="eq-4">★</label>
@@ -123,7 +133,7 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label>4. Comodidad y ambiente del espacio (sofá, TV, limpieza) [cite: 25]</label>
+                        <label>4. Comodidad y ambiente del espacio (sofá, TV, limpieza)</label>
                         <div class="star-rating">
                             <input type="radio" id="co-5" name="comodidad_espacio" value="5"><label for="co-5">★</label>
                             <input type="radio" id="co-4" name="comodidad_espacio" value="4"><label for="co-4">★</label>
@@ -133,18 +143,18 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label>5. ¿Qué extras te resultaron más útiles? (Selecciona varios si aplica) [cite: 53]</label>
+                        <label>5. ¿Qué extras te resultaron más útiles? (Selecciona varios si aplica)</label>
                         <div class="choice-group">
-                            <label><input type="checkbox" name="extras_utiles[]" value="Nevera con bebidas"> Nevera con bebidas [cite: 54]</label>
-                            <label><input type="checkbox" name="extras_utiles[]" value="Baño privado"> Baño privado [cite: 55]</label>
-                            <label><input type="checkbox" name="extras_utiles[]" value="Equipamiento alta gama"> Equipamiento de alta gama [cite: 58]</label>
-                            <label><input type="checkbox" name="extras_utiles[]" value="Ambiente para streaming"> Ambiente preparado para streaming [cite: 59]</label>
+                            <label><input type="checkbox" name="extras_utiles[]" value="Nevera con bebidas"> Nevera con bebidas</label>
+                            <label><input type="checkbox" name="extras_utiles[]" value="Baño privado"> Baño privado</label>
+                            <label><input type="checkbox" name="extras_utiles[]" value="Equipamiento alta gama"> Equipamiento de alta gama</label>
+                            <label><input type="checkbox" name="extras_utiles[]" value="Ambiente para streaming"> Ambiente preparado para streaming</label>
                         </div>
                     </div>
 
                     <h2>Opinión General</h2>
                     <div class="form-group">
-                        <label>6. Relación calidad-precio [cite: 33]</label>
+                        <label>6. Relación calidad-precio</label>
                         <div class="star-rating">
                             <input type="radio" id="pr-5" name="calidad_precio" value="5"><label for="pr-5">★</label>
                             <input type="radio" id="pr-4" name="calidad_precio" value="4"><label for="pr-4">★</label>
@@ -154,25 +164,25 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label>7. ¿Recomendarías GamersHub Studio a otras personas? [cite: 61]</label>
+                        <label>7. ¿Recomendarías GamersHub Studio a otras personas?</label>
                          <div class="choice-group">
-                            <label><input type="radio" name="recomendacion" value="Sí, totalmente"> Sí, totalmente [cite: 63]</label>
-                            <label><input type="radio" name="recomendacion" value="Quizás, con mejoras"> Sí, con mejoras [cite: 64]</label>
-                            <label><input type="radio" name="recomendacion" value="No"> No [cite: 65]</label>
+                            <label><input type="radio" name="recomendacion" value="Sí, totalmente"> Sí, totalmente</label>
+                            <label><input type="radio" name="recomendacion" value="Quizás, con mejoras"> Sí, con mejoras</label>
+                            <label><input type="radio" name="recomendacion" value="No"> No</label>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label>8. ¿Con qué frecuencia crees que usarías este espacio? [cite: 66]</label>
+                        <label>8. ¿Con qué frecuencia crees que usarías este espacio?</label>
                          <div class="choice-group">
-                            <label><input type="radio" name="frecuencia" value="1 vez a la semana o más"> 1 vez a la semana o más [cite: 68]</label>
-                            <label><input type="radio" name="frecuencia" value="2-3 veces al mes"> 2-3 veces al mes [cite: 70]</label>
-                            <label><input type="radio" name="frecuencia" value="1 vez al mes"> 1 vez al mes [cite: 71]</label>
-                            <label><input type="radio" name="frecuencia" value="Ocasionalmente"> Ocasionalmente [cite: 72]</label>
+                            <label><input type="radio" name="frecuencia" value="1 vez a la semana o más"> 1 vez a la semana o más</label>
+                            <label><input type="radio" name="frecuencia" value="2-3 veces al mes"> 2-3 veces al mes</label>
+                            <label><input type="radio" name="frecuencia" value="1 vez al mes"> 1 vez al mes</label>
+                            <label><input type="radio" name="frecuencia" value="Ocasionalmente"> Ocasionalmente</label>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="mejoras">9. ¿Qué te gustaría ver a futuro en GamersHub Studio? [cite: 73]</label>
-                        <textarea id="mejoras" name="sugerencias_futuro"></textarea>
+                        <label for="mejoras">9. ¿Qué te gustaría ver a futuro en GamersHub Studio?</label>
+                        <textarea id="mejoras" name="sugerencias_futuro" placeholder="Torneos, eventos, más juegos, partnership con comida... ¡Lanza tus ideas!"></textarea>
                     </div>
                     
                     <button id="submit-button" type="submit">Enviar Feedback</button>
@@ -219,8 +229,8 @@
                     headers: { 'Accept': 'application/json' }
                 });
                 if (response.ok) {
-                    formContainer.style.display = 'none'; // Oculta todo el contenedor del form
-                    postSubmitSection.style.display = 'block'; // Muestra la nueva sección
+                    formContainer.style.display = 'none';
+                    postSubmitSection.style.display = 'block';
                 } else {
                     status.innerHTML = "Oops! Hubo un problema al enviar. Inténtalo de nuevo.";
                     status.style.color = 'red';
